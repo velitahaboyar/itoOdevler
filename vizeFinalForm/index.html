@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vizefilan</title>
+    <script>
+      function notHesapla() {
+        const vize = document.getElementById("vizeSonuc");
+        const final = document.getElementById("finalSonuc");
+        let vizeOran = 40;
+        let finalOran = 60;
+
+        let sonuc =
+          (vize.value * vizeOran) / 100 + (final.value * finalOran) / 100;
+
+        let yazdir = document.getElementById("sonucYazdir");
+        if (sonuc <= 59) {
+          yazdir.style = "color:red";
+          yazdir.innerHTML = "Ortalamanız: " + parseInt(sonuc) + " kaldınız.";
+        } else if (sonuc >= 60) {
+          yazdir.style = "color:green";
+          yazdir.innerHTML = "Ortalamanız: " + parseInt(sonuc) + " geçtiniz.";
+        }
+        console.log(sonuc);
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="">
+      <label for="vize"
+        >Vize
+        <input type="text" id="vizeSonuc" />
+      </label>
+      <br />
+      <br />
+      <label for="final"
+        >Final
+        <input type="text" id="finalSonuc" />
+      </label>
+      <br />
+      <br />
+      <button type="button" id="hesapla" onclick="notHesapla()">
+        Not Hesapla
+      </button>
+      <span id="sonucYazdir"></span>
+    </form>
+  </body>
+</html>
