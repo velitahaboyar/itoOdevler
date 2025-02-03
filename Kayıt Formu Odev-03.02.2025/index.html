@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formfilan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Üyelik Başvurusu</header>
+      <p>Üyelik başvurusu için lütfen bütün alanları doldurun.</p>
+      <hr />
+      <form action="" class="form">
+        <div class="input-box">
+          <label for="isim">İsim</label>
+          <input type="text" id="isim" />
+        </div>
+        <div class="input-box">
+          <label for="soyisim">Soyisim</label>
+          <input type="text" id="soyisim" required />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label for="adres">Adres</label>
+            <input type="text" id="adres" required />
+          </div>
+        </div>
+        <div class="input-box">
+          <label for="adres2">Adres 2. Satır</label>
+          <input type="text" id="adres2" />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label for="ilceSehir">İlçe/Şehir</label>
+            <input type="text" id="ilceSehir" required />
+          </div>
+          <div class="input-box">
+            <label for="il">İl</label>
+            <input type="text" id="il" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label for="postaKodu">Posta Kodu</label>
+            <input type="text" id="postaKodu" required />
+          </div>
+
+          <div class="input-box">
+            <div class="select-box">
+              <label for="ulke">Ülke</label>
+              <select id="ulke">
+                <option value="" disabled selected>Lütfen Seçiniz</option>
+                <option value="Türkiye">Türkiye</option>
+                <option value="Türkiye">Almanya</option>
+                <option value="Türkiye">Fransa</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label for="eposta">Eposta</label>
+            <input
+              type="email"
+              id="eposta"
+              required
+              placeholder="ornek@mail.com"
+            />
+          </div>
+          <div class="input-box">
+            <label for="evTel">Ev Numarası</label>
+            <input type="tel" id="evTel" placeholder="(000) 000 0000" />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label for="cepTel">Cep Numarası</label>
+            <input
+              type="tel"
+              id="cepTel"
+              required
+              placeholder="(000) 000 0000"
+            />
+          </div>
+          <div class="input-box">
+            <label for="isTel">İş Numarası</label>
+            <input type="tel" id="isTel" placeholder="(000) 000 0000" />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label for="website">Websitesi</label>
+            <input type="url" id="website" />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label for="tarih">Tarih</label>
+            <input type="date" id="tarih" />
+          </div>
+        </div>
+
+        <button type="button" onclick="kaydet()">Üyelik İçin Başvur</button>
+        <button type="button" onclick="getir()">Bilgileri Getir</button>
+      </form>
+    </section>
+  </body>
+  <script>
+    function getir() {
+      let user = localStorage.getItem("user");
+      let userObj = JSON.parse(user);
+      console.log(user);
+      console.log(userObj);
+    }
+
+    function kaydet() {
+      let isim = document.getElementById("isim");
+      let soyisim = document.getElementById("soyisim");
+      let adres = document.getElementById("adres");
+      let adres2 = document.getElementById("adres2");
+      let ilceSehir = document.getElementById("ilceSehir");
+      let il = document.getElementById("il");
+      let postaKodu = document.getElementById("postaKodu");
+      let ulke = document.getElementById("ulke");
+      let eposta = document.getElementById("eposta");
+      let evTel = document.getElementById("evTel");
+      let cepTel = document.getElementById("cepTel");
+      let isTel = document.getElementById("isTel");
+      let website = document.getElementById("website");
+      let tarih = document.getElementById("tarih");
+
+      var user = {
+        ad: isim.value,
+        soyad: soyisim.value,
+        adres: adres.value,
+        adres2: adres2.value,
+        ilceSehir: ilceSehir.value,
+        il: il.value,
+        postaKodu: postaKodu.value,
+        ulke: ulke.value,
+        eposta: eposta.value,
+        evTelefon: evTel.value,
+        cepTelefon: cepTel.value,
+        isTelefon: isTel.value,
+        website: website.value,
+        tarih: tarih.value,
+      };
+      console.log(user);
+
+      localStorage.setItem("user", JSON.stringify(user));
+    }
+  </script>
+</html>

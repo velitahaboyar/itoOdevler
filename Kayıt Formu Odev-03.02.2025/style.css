@@ -1,0 +1,87 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Rubik", serif;
+}
+
+body {
+	padding: 100px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #333;
+
+}
+
+.container {
+	position: relative;
+	max-width: 700px;
+	width: 100%;
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.container header {
+	font-size: 1.5rem;
+	color: #333;
+	font-weight: 500;
+	text-align: left;
+}
+
+.container p {
+	line-height: 4rem;
+	font-weight: 100;
+}
+
+.container .form {
+	margin-top: 30px;
+}
+
+.form .input-box {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.input-box label{
+	color: #333;
+}
+
+.form :where(.input-box input, .select-box) {
+	position: relative;
+	height: 50px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #c9c9c9;
+	margin-top: 8px;
+	border-radius: 4px;
+	padding: 0 12px;
+	font-size: 1rem;
+}
+
+.form .column {
+	display: flex;
+	column-gap: 12px;
+}
+
+.select-box {
+	outline: 0;
+	border: 0;
+}
+
+.form button {
+	height: 52px;
+	width: 100%;
+	background-color: #18bd5b;
+	border-color: #18bd5b;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 400;
+	border: none;
+	margin-top: 32px;
+	cursor: pointer;
+	border-radius: 4px;
+}
