@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <button type="button" onclick="kaydet()">Üyelik İçin Başvur</button>
+        <button type="submit" onclick="kaydet()">Üyelik İçin Başvur</button>
         <button type="button" onclick="getir()">Bilgileri Getir</button>
       </form>
     </section>
@@ -118,9 +118,28 @@
   <script>
     function getir() {
       let user = localStorage.getItem("user");
-      let userObj = JSON.parse(user);
-      console.log(user);
-      console.log(userObj);
+      if (user) {
+        let userObj = JSON.parse(user);
+        console.log(user);
+        console.log(userObj);
+
+        document.getElementById("isim").value = userObj.ad || "";
+        document.getElementById("soyisim").value = userObj.soyad || "";
+        document.getElementById("adres").value = userObj.adres || "";
+        document.getElementById("adres2").value = userObj.adres2 || "";
+        document.getElementById("ilceSehir").value = userObj.ilceSehir || "";
+        document.getElementById("il").value = userObj.il || "";
+        document.getElementById("postaKodu").value = userObj.postaKodu || "";
+        document.getElementById("ulke").value = userObj.ulke || "";
+        document.getElementById("eposta").value = userObj.eposta || "";
+        document.getElementById("evTel").value = userObj.evTelefon || "";
+        document.getElementById("cepTel").value = userObj.cepTelefon || "";
+        document.getElementById("isTel").value = userObj.isTelefon || "";
+        document.getElementById("website").value = userObj.website || "";
+        document.getElementById("tarih").value = userObj.tarih || "";
+      } else {
+        console.log("Kayıtlı kullanıcı bulunamadı.");
+      }
     }
 
     function kaydet() {
