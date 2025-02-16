@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasta Kayıt</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e2520a8083.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="left-h1">
+          <h1>Araçlar</h1>
+        </div>
+        <div class="side-links">
+          <div>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Link 2</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Link 3</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Link 5</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Link 6</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <nav>
+          <div class="nav-links">
+            <div class="navlink-1">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa-solid fa-house"></i> Anasayfa</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navlink-2">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa-solid fa-phone"></i> İletişim</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navlink-3">
+              <ul>
+                <li>
+                  <a href="#"><i class="fa-solid fa-question"></i> S.S.S</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navlink-4">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket"></i> Giriş Yap</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="navlink-5">
+              <ul>
+                <li><a href="#">Kayıt Ol</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="content">
+        <div class="head">
+          <h1>Hasta Kayıt Formu</h1>
+        </div>
+        <div class="form-container">
+          <div class="form">
+            <div class="form-grid">
+              <form action="">
+                <div class="input-box" id="form-isim">
+                  <label for="isim"></label>
+                  <input type="text" id="isim" placeholder="İsim" required />
+                </div>
+                <div class="input-box" id="form-soyisim">
+                  <label for="soyisim"></label>
+                  <input
+                    type="text"
+                    id="soyisim"
+                    placeholder="Soyisim"
+                    required
+                  />
+                </div>
+                <div class="input-box" id="form-adres">
+                  <label for="adres"></label>
+                  <input type="text" id="adres" placeholder="Adres" required />
+                </div>
+                <div class="input-box" id="form-dt">
+                  <label for="dtarih"></label>
+                  <input
+                    type="text"
+                    id="dtarih"
+                    placeholder="Doğum Tarihi"
+                    required
+                  />
+                </div>
+                <div class="input-box" id="form-tc">
+                  <label for="tc"></label>
+                  <input type="text" id="tc" placeholder="TC Kimlik" required />
+                </div>
+                <div class="input-box" id="form-tel">
+                  <label for="telefon"></label>
+                  <input
+                    type="tel"
+                    id="telefon"
+                    placeholder="Telefon"
+                    required
+                  />
+                </div>
+                <button id="form-btn" type="submit" onclick="kaydet()">
+                  Kaydet
+                </button>
+                <button type="button" onclick="getir()">
+                  Local'deki Bilgileri Getir
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-desc">
+          <p>&copy 2025 | designed by me.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
